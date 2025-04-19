@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  background-color: #f0f4f7;
+  padding: 2rem;
+  div#header {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  hr {
+    color: #dcdcdc;
+    height: 0.5px;
+  }
+
+  div#cards-container {
+    padding: 1rem 0.5rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 10px 10px 15px #dcdcdc;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      .top-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .availability {
+          padding: 0.2rem 0.5rem;
+          background-color: #dcdcdc;
+          border-radius: 50px;
+          color: black;
+          font-size: 1rem;
+          opacity: 1;
+        }
+
+        .rate {
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+      }
+
+      .mid-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2rem;
+        padding: 0.5rem;
+
+        .photo {
+          img {
+            height: 125px;
+            width: 125px;
+            background-color: red;
+            border-radius: 50%;
+          }
+        }
+
+        .name {
+          h1 {
+            font-weight: 500;
+          }
+        }
+
+        .role {
+          h2 {
+            font-weight: 400;
+          }
+        }
+
+        .company {
+          h3 {
+            font-weight: 300;
+          }
+        }
+
+        .skills {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.5rem;
+
+          .skill {
+            padding: 0.2rem 0.4rem;
+            font-size: medium;
+            border-radius: 50px;
+            font-weight: 400;
+            border: solid #dadada 1px;
+          }
+        }
+
+        .description-container {
+          text-align: center;
+          margin-top: 0.5rem;
+          line-height: normal;
+        }
+      }
+
+      .bottom-info {
+        border: none;
+        margin-top: auto;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #3b82f6;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+
+  @media (min-width: 540px) {
+    div#cards-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 900px) {
+    div#cards-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    div#cards-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .skills .skill {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.3rem;
+  }
+
+  .availability,
+  .rate {
+    font-size: 0.85rem;
+  }
+}
