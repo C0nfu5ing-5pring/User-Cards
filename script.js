@@ -253,14 +253,18 @@ const users = [
 
 let main = document.querySelector("main");
 let cardsContainer = document.querySelector("#cards-container");
+let bottomBtn = document.querySelector(".bottom-info");
 
 function cardMaker() {
   let sum = "";
 
   users.forEach(function (user, idx) {
+    let isFriend = user.available === "Friends";
     sum += `        <div class="card">
           <div class="top-info">
-            <div class="availability">${user.available}</div>
+            <div class="availability ${isFriend ? "bgGreen" : "bgRed"}">${
+      user.available
+    }</div>
             <div class="rate">${user.ratePerHour}/hr</div>
           </div>
 
@@ -295,9 +299,11 @@ function cardMaker() {
             </div>
           </div>
 
-          <button class="bottom-info" id=${idx}>
-            <h3 id=${idx}>Add Friend</h3>
-          </button>
+          <button class="bottom-info ${
+            isFriend ? "bgRed" : "bgBlue"
+          }" id=${idx}>
+          <h3 id=${idx}>${isFriend ? "Unfriend" : "Add Friend"}</h3>
+        </button>
         </div>`;
 
     cardsContainer.innerHTML = sum;

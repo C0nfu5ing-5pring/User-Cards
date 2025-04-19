@@ -67,6 +67,14 @@ main div#cards-container .card .top-info .rate {
   font-size: 1.1rem;
   font-weight: 700;
 }
+main div#cards-container .card .top-info .bgGreen {
+  background-color: #10b981;
+  color: white;
+}
+main div#cards-container .card .top-info .bgRed {
+  background-color: #f43f5e;
+  color: white;
+}
 main div#cards-container .card .mid-info {
   display: flex;
   align-items: center;
@@ -120,6 +128,12 @@ main div#cards-container .card .bottom-info {
   justify-content: center;
   cursor: pointer;
   color: white;
+}
+main div#cards-container .card .bgRed {
+  background-color: #f43f5e;
+}
+main div#cards-container .card .bgBlue {
+  background-color: #3c82f6;
 }
 @media (min-width: 540px) {
   main div#cards-container {

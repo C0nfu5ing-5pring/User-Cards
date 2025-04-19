@@ -69,6 +69,16 @@ main {
           font-size: 1.1rem;
           font-weight: 700;
         }
+
+        .bgGreen {
+          background-color: #10b981;
+          color: white;
+        }
+
+        .bgRed {
+          background-color: #f43f5e;
+          color: white;
+        }
       }
 
       .mid-info {
@@ -140,6 +150,14 @@ main {
         justify-content: center;
         cursor: pointer;
         color: white;
+      }
+
+      .bgRed {
+        background-color: #f43f5e;
+      }
+
+      .bgBlue {
+        background-color: #3c82f6;
       }
     }
   }
